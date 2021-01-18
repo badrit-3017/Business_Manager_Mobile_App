@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "744025704254",
+    "project_id": "poush-expense",
+    "storage_bucket": "poush-expense.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744025704254:android:978c068613e0b4e2dd4e6f",
+        "android_client_info": {
+          "package_name": "com.poush.expense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744025704254-9d8b4ojq51h6qpdmqqrv1ii9k1r9tapp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn1LM7NEe9JCJu1eiVC7x0OUa01IWIzfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744025704254-9d8b4ojq51h6qpdmqqrv1ii9k1r9tapp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
