@@ -1,4 +1,4 @@
-
+//Custom history specific to a project is handled here
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expense/models/history.dart';
 import 'package:flutter/material.dart';

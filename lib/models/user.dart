@@ -1,3 +1,4 @@
+//Custom user object
 class CustomUser{
   final String uid;
 

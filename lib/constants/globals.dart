@@ -1,3 +1,4 @@
+//global variables
 library important_stuff;
 
 String uid='';

@@ -1,3 +1,4 @@
+//Body for the investments hosted in business.dart
 import 'package:expense/constants/loading.dart';
 import 'package:expense/models/investment.dart';
 import 'package:expense/models/investment_tile.dart';

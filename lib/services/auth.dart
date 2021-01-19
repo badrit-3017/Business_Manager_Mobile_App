@@ -1,3 +1,5 @@
+//We handle all register or signing in functions here
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expense/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';

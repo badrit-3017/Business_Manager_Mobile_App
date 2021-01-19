@@ -1,3 +1,5 @@
+//This file determines if the user is logged in or not
+
 import 'package:expense/models/user.dart';
 import 'package:expense/screens/authenticate/authenticate.dart';
 import 'package:expense/screens/home/home.dart';

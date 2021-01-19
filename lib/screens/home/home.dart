@@ -1,3 +1,5 @@
+//This is the home page of our application
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expense/error_checking.dart/cons.dart';
 import 'package:expense/error_checking.dart/create_business.dart';

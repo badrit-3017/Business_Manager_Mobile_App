@@ -1,3 +1,4 @@
+//Custom investment history object
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class History{

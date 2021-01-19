@@ -1,3 +1,5 @@
+//create_business.dart: This file contains a widget for creating a business
+
 import 'package:expense/screens/home/bottom_sheets.dart/create_business_form.dart';
 import 'package:flutter/material.dart';
 import 'package:expense/constants/globals.dart' as globals;

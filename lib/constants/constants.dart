@@ -1,3 +1,5 @@
+//constants.dart: This file contains constants
+
 import 'package:flutter/material.dart';
 
 const headingText=  TextStyle(

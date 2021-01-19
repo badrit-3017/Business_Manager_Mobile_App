@@ -1,3 +1,5 @@
+//database.dart: This file contains methods for interacting with our backend firestore
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expense/constants/globals.dart' as globals;
 import 'package:expense/models/history.dart';

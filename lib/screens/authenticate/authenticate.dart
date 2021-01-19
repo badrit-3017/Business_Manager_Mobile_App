@@ -1,3 +1,6 @@
+//basic authenticate class
+//has a toggle function to switch between sign in and register
+
 import 'package:expense/screens/authenticate/register.dart';
 import 'package:expense/screens/authenticate/sign_in.dart';
 import 'package:flutter/material.dart';
