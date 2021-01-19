@@ -39,7 +39,7 @@ class _RegisterState extends State<Register> {
           onPressed: () {
             widget.toggle();
           },
-           icon: Icon(Icons.fingerprint), 
+           icon: Icon(Icons.apps), 
            label: Text('Sign In')) 
         ]
       

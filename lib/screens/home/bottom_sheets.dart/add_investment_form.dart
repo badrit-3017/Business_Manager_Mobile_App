@@ -54,9 +54,7 @@ class _AddInvestmentFormState extends State<AddInvestmentForm> {
                if(_formkey.currentState.validate()){
                  await DatabaseService(uid:user.uid).addInvestment(name);
                  Navigator.pop(context);
-               }
-             
-               
+               }             
 
            }
            ),

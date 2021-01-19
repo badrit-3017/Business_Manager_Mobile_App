@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 const headingText=  TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 28.0,
                     fontFamily: 'Roboto',
                     color: Colors.black,
+                    fontWeight: FontWeight.bold,
                     height: 2.0,
                   );
 

@@ -4,6 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:expense/models/user.dart';
 import 'package:expense/constants/globals.dart' as globals;
+import 'dart:math';
+import 'package:expense/models/history.dart';
+import 'package:expense/models/investment.dart';
 
 class AuthService{
 
@@ -61,13 +64,11 @@ class AuthService{
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User user = result.user;
-      //register the user with their name
-      await DatabaseService(uid:user.uid).createUserData(name,'');
       globals.uid = user.uid;
+      //register the user with their name
+      await Creator(uid:user.uid).createUserData(name,'');      
       DocumentSnapshot userDetails  = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
-      globals.userName = userDetails['name'].toString();
-      globals.businessName = userDetails['business'].toString();
-
+      globals.userName = name;
       return _customUser(user);
 
     } catch (e) {
@@ -78,6 +79,7 @@ class AuthService{
 
   //signout
   Future signOut() async {
+    globals.uid='';globals.businessName ='';globals.userName='';
     try {
       return await _auth.signOut();
     } catch (e) {
@@ -88,3 +90,25 @@ class AuthService{
 
 
 }
+class Creator{
+
+  //collection reference
+  final String uid;
+
+  Creator({this.uid});
+
+  
+  final CollectionReference users = FirebaseFirestore.instance.collection('users');
+  
+  Future createUserData(String name, String business) async {
+
+    return await users.doc(uid).set({
+      'name' : name,
+      'business' :business,
+
+    });
+  }
+}
+
+    
+    

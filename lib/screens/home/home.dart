@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:expense/error_checking.dart/cons.dart';
 import 'package:expense/error_checking.dart/create_business.dart';
 import 'package:expense/options/allHistory.dart';
 import 'package:expense/options/business.dart';
@@ -102,7 +103,8 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                       fontSize: 18.0,
                       fontFamily: 'Roboto',
-                      color: Colors.black12,
+                      color: Colors.black,
+                      fontStyle: FontStyle.italic,
                       height: 2.0,
                     ),
                     ),
@@ -123,7 +125,7 @@ class _HomeState extends State<Home> {
                                        //function here
                                     Navigator.push(
                                                context,
-                                    MaterialPageRoute(builder: (context) => Business()),
+                                    MaterialPageRoute(builder: (context) => Construction()),
                                    );
                                     },
                             child:GridOption(
@@ -157,10 +159,21 @@ class _HomeState extends State<Home> {
                             ),
                             InkResponse(
                                onTap: (){
-                                        Navigator.push(
+                                          if(globals.businessName=='') {
+
+                                    Navigator.push(
+                                               context,
+                                    MaterialPageRoute(builder: (context) => CreateBusiness()),
+                                   );
+
+                                  }
+                                  else{
+                                     Navigator.push(
                                                context,
                                     MaterialPageRoute(builder: (context) => AllHistory()),
                                    );
+
+                                  }
                                     },
                                     
                                  child: GridOption(
@@ -168,9 +181,18 @@ class _HomeState extends State<Home> {
                                  source: "assets/013-history.svg",
                               ),
                             ),
-                            GridOption(
-                               title: 'Inventory',
-                               source: "assets/012-check-list.svg",
+                            InkResponse(
+                                 onTap: (){
+                                       //function here
+                                    Navigator.push(
+                                               context,
+                                    MaterialPageRoute(builder: (context) => Construction()),
+                                   );
+                                    },
+                                child: GridOption(
+                                 title: 'Inventory',
+                                 source: "assets/012-check-list.svg",
+                              ),
                             ),
                           ], 
                         

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expense/constants/globals.dart' as globals;
 import 'package:expense/models/history.dart';
 import 'package:expense/models/investment.dart';
+import 'dart:math';
 
 class DatabaseService {
   
@@ -11,20 +12,11 @@ class DatabaseService {
 
   final CollectionReference business = FirebaseFirestore.instance.collection('business');
   final CollectionReference users = FirebaseFirestore.instance.collection('users');
+  
   final CollectionReference investments = FirebaseFirestore.instance.collection('business').doc(globals.businessName).collection('investments');
-  final CollectionReference historys = FirebaseFirestore.instance.collection('business').doc(globals.businessName).collection('history');
+  final CollectionReference historys = FirebaseFirestore.instance.collection('business').doc(globals.businessName).collection('history') ;
   
 
-
- 
-  Future createUserData(String name, String business) async {
-
-    return await users.doc(uid).set({
-      'name' : name,
-      'business' :business,
-
-    });
-  }
 
   Future addInvestment(String name) async {
 
@@ -45,6 +37,8 @@ class DatabaseService {
        'time':Timestamp.now(),
     });
   }
+  //create a business
+ 
 
 
 
@@ -86,10 +80,5 @@ class DatabaseService {
   Stream<List<History>> get history {
     return historys.snapshots().map(_historyListFromSnapshot);
   }
-
-
-  //get all  stream
- 
   
-
 }

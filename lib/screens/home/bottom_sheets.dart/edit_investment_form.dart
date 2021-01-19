@@ -94,7 +94,7 @@ class _EditInvestmentsFormState extends State<EditInvestmentsForm> {
                Navigator.pop(context);
  
               }
-                Navigator.pop(context);
+               
  
              },
           )
