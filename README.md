@@ -13,7 +13,7 @@ A flutter app for business owners to manage their business. Currently users can 
 2. Install Android Studio/Visual Studio Code and Flutter
 3. Flutter Run on a virtual android device or through USB tethering.
 
-##Features:
+## Features:
 1. This app has 4 main features:
 2. The personal page shows personal investements. The user can also add/remove investments here.
 3. The business page shows business investements. The user can also add/remove investments here.
