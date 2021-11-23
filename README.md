@@ -1,6 +1,6 @@
 # A sample Business Manager Mobile App
 
-A flutter app for business owners to manage their business. Currently users can check on active projects and personal expenses.
+A flutter app for business owners to manage their business. Currently users can check on active projects and personal expenses. The backend is hosted on google firestore. All code files are written in dart.
 
 
 
